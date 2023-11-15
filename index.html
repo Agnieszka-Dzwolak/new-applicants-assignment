@@ -8,33 +8,194 @@
     </head>
     <body>
         <div class="container">
-            <input type="text" class="display" />
-            <!-- Add your classes or ids -->
-            <div class="buttons">
-                <button>AC</button>
-                <button>DEL</button>
-                <button>%</button>
-                <button>/</button>
+            <input type="text" class="js-calculation calculation" />
 
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>*</button>
+            <div>
+                <button
+                    class="pink-button"
+                    onclick="
+                  calculation = '';
+                  displayCalculation();
+                "
+                >
+                    AC
+                </button>
 
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
+                <button
+                    class="pink-button"
+                    onclick="
+                  deleteLastCharacter();
+                "
+                >
+                    DEL
+                </button>
 
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>+</button>
+                <button
+                    class="pink-button"
+                    onclick="
+                  updateCalculation(' / 100 ');
+                "
+                >
+                    %
+                </button>
 
-                <button>0</button>
-                <button>00</button>
-                <button>.</button>
-                <button></button>
+                <button
+                    class="pink-button"
+                    onclick="
+                  updateCalculation(' / ');
+                "
+                >
+                    /
+                </button>
+            </div>
+            <div>
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('7');
+                "
+                >
+                    7
+                </button>
+
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('8');
+                "
+                >
+                    8
+                </button>
+
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('9');
+                "
+                >
+                    9
+                </button>
+
+                <button
+                    class="pink-button"
+                    onclick="
+                  updateCalculation(' * ');
+                "
+                >
+                    *
+                </button>
+            </div>
+            <div>
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('4');
+                "
+                >
+                    4
+                </button>
+
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('5');
+                "
+                >
+                    5
+                </button>
+
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('6');
+                "
+                >
+                    6
+                </button>
+
+                <button
+                    class="pink-button"
+                    onclick="
+                  updateCalculation(' - ');
+                "
+                >
+                    -
+                </button>
+            </div>
+            <div>
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('1');
+                "
+                >
+                    1
+                </button>
+
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('2');
+                "
+                >
+                    2
+                </button>
+
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('3');
+                "
+                >
+                    3
+                </button>
+
+                <button
+                    class="pink-button"
+                    onclick="
+                  updateCalculation(' + ');
+                "
+                >
+                    +
+                </button>
+            </div>
+            <div>
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('0');
+                "
+                >
+                    0
+                </button>
+
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('00');
+                "
+                >
+                    00
+                </button>
+
+                <button
+                    class="black-button"
+                    onclick="
+                  updateCalculation('.');
+                "
+                >
+                    .
+                </button>
+
+                <button
+                    class="pink-button"
+                    onclick="
+                  calculation = eval(calculation);
+                  displayCalculation();
+                "
+                >
+                    =
+                </button>
             </div>
         </div>
         <script src="./src/main.js"></script>
